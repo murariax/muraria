@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<section class="contact-section">
+  <h2>Contact Me</h2>
+  <form method="POST" class="contact-form">
+      {% csrf_token %}
+      <table class="contact-table">
+          {{ form.as_table }}
+      </table>
+      <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
+
+
+
+
+{% if success %}
+<p style="color: lightgreen; margin-top: 1rem;">✅ Your message was sent successfully!</p>
+{% endif %}
+
+
+   <!-- <div class="popup">
+        <h3>Thank you for reaching out!</h3>
+        <p>I will get back to you as soon as possible.</p> -->
+    
+{% endblock %}
