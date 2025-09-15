@@ -1,0 +1,413 @@
+/*----Hero Section----*/
+body {
+    margin: 0; /* removes default white gaps */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* clean modern font */
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #e0e0e0; /* light text */
+}
+
+
+section {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #e0e0e0;         /* Light text for readability */
+    padding: 4rem 2rem;     /* Space inside the section */
+    border-radius: 8px;     /* Rounded corners */
+    margin: 2rem auto;      /* Space between sections */
+    max-width: 900px;       /* Keep text narrow for better readability */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+}
+
+
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 1rem 2rem;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+
+    min-height: 100vh;
+    color: white;
+
+}
+
+.hero-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+    border: 4px solid #fff;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+   margin-bottom: 15px;
+    font-weight: 300;
+    color:#e0e0ff;
+
+}
+
+.hero-bio {
+    max-width: 600px;
+    line-height: 1.6;
+    color:#f5f7fa;
+   
+}
+
+.hero button {
+    background: #00bcd4;
+    color: white;
+    border: none;
+    padding: 12px 24x;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    .hero button:hover {
+        background: #00bcd4;
+    }
+}
+
+.navbar {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+      
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px); /* optional glass effect */
+
+}
+
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+    align-items: right;
+    margin: 0 auto;
+  }
+
+  .nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    
+  }
+
+
+  .nav-links a:hover {
+    color: #00bcd4
+  }
+
+  .welcome {
+    font-size: 1.7rem;
+    margin: 0px 0 20px 0;
+    font-weight: bold;
+  
+  }
+
+  .about {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    line-height: 1.6;
+    color: #ddd;    
+  }
+
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00bcd4;
+
+  }
+
+  /* About Page */
+.about h1 {
+    color: #00bcd4;   /* Cyan highlight for main heading */
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.skills-list {
+    list-style: none;   /* Remove default bullets */
+    padding: 0;
+}
+
+.skills-list li {
+    background: rgba(255, 255, 255, 0.05); /* soft card background */
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border-radius: 6px;
+    transition: transform 0.2s ease;
+}
+
+.skills-list li:hover {
+    transform: translateX(5px); /* fun hover effect */
+    color: #00bcd4;             /* cyan highlight */
+}
+
+
+  .projects {
+    padding: 2rem;
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #ddd;  
+    font-size: 2 rem;  
+    text-align: center;
+  }
+
+  .project-card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    transition: transform 0.2s ease;  
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+  }
+
+    .project-card h2 {
+        margin-bottom: 0.5rem;
+        color: #00bcd4;
+    }
+
+
+.popup {
+    display: none;                     /* Hidden by default */
+    position: fixed;                   /* Stays on screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);    /* Semi-transparent background */
+    justify-content: center;           /* Center horizontally */
+    align-items: center;               /* Center vertically */
+}
+
+.popup-content {
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+.popup-content p {
+    margin-bottom: 1rem;
+}
+
+.popup-content button {
+    padding: 0.6rem 1.2rem;
+    background: #00bcd4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #121212;
+}
+
+.popup-content button:hover {
+    background: #0097a7;
+}
+
+
+/* Contact Page Styling */
+.contact-section {
+  display: flex;
+ 
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* match home */
+  color: #fff;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6); /* dark semi-transparent box */
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.5);
+  text-align: left; /* align form labels nicely */
+}
+
+/* Form fields */
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1); /* fixed transparent style */
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-container input::placeholder,
+.contact-container textarea::placeholder {
+  color: #ddd; /* subtle placeholder */
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+  outline: none;
+  border: 1px solid #00bcd4; /* glowing cyan border */
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Button */
+.contact-container button {
+  width: 100%;
+  padding: 12px;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-container button:hover {
+  background: #0097a7;
+}
+
+/* Contact Success Page */
+.success-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #fff;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  min-height: 100vh; /* full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00bcd4; /* cyan highlight */
+}
+
+.success-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #ddd;
+}
+
+/* Info cards layout */
+.success-cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* small lift on hover */
+}
+
+.card .icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #00bcd4;
+}
+
+/* Back to home button */
+.btn-home {
+  background: #00bcd4;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-home:hover {
+  background: #0097a7;
+}
+
+/* Contact link on Projects page */
+.contact-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.contact-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.btn-contact {
+  display: inline-block;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-contact:hover {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+
+}
