@@ -5,15 +5,16 @@
 {% block content %}
 
 <section class="contact-section">
-  <h2>Contact Me</h2>
-  <form method="POST" class="contact-form">
+  <div class="contact-container">
+    <h2>Contact Me</h2>
+    <form method="post">
       {% csrf_token %}
-      <table class="contact-table">
-          {{ form.as_table }}
-      </table>
-      <button type="submit" class="btn">Send Message</button>
-  </form>
+      {{ form.as_p }}
+      <button type="submit">Send</button>
+    </form>
+  </div>
 </section>
+
 
 
 

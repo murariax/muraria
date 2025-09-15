@@ -1,0 +1,38 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="success-section">
+  <!-- Big Heading -->
+  <h1 class="success-title">Thanks for contacting me!</h1>
+  <p class="success-subtitle">Your message has been received. I'll reply soon.</p>
+
+  <!-- Info Cards -->
+  <div class="success-cards">
+    <!-- Card 1 -->
+    <div class="card">
+      <span class="icon">📧</span>
+      <h3>Confirmation</h3>
+      <p>We've successfully received your message.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <span class="icon">⏳</span>
+      <h3>Response Time</h3>
+      <p>Replies are usually sent within 2 hours.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <span class="icon">🤝</span>
+      <h3>Next Steps</h3>
+      <p>I'll reach out to your email soon.</p>
+    </div>
+  </div>
+
+  <!-- Back button -->
+  <a href="{% url 'home' %}" class="btn-home">⬅ Back to Home</a>
+</section>
+{% endblock %}
+                                           

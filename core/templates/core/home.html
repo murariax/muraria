@@ -11,14 +11,14 @@
     <h2 class="welcome">Welcome to My Personal Website</h2>
     <img src="{% static 'core/images/profile.jpg' %}" alt="My Profile Photo" class="hero-img">
     <h1 class="hero-title">Hi, I'm Max 👋</h1>
-    <h2 class="hero-subtitle">Software Developer | Lifelong Learner</h2>
+    <h2 class="hero-subtitle">Software Developer | Lifelong Learner | Wellness Coach</h2>
     <p class="hero-bio">
         Welcome to my corner of the web. I enjoy building things on the web. I am happy to help you with your projects. Feel free to reach out!
     </p>
 
-    <button onclick="alert('Thanks for visiting, Muraria will reach out soon!')">
-        Contact Me
-    </button>
+    <br>
+    
+    <a href="{% url 'contact' %}" class="btn-contact">📩 Contact Me</a>
 </section>
   </section>
 {% endblock %}
